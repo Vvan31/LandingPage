@@ -1,0 +1,73 @@
+@import url("/media/fonts/NeueHaasUnica-Regular.otf");
+@import url("/media/fonts/NeueHaasUnica-MediumItalic.otf");
+@import url("/media/fonts/NeueHaasUnica-Medium.otf");
+@import url("/media/fonts/NeueHaasUnica-Italic.otf");
+body {
+  background-image: url("/media/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+body main {
+  height: 100vh;
+}
+body main header {
+  padding-left: 2%;
+}
+body main header nav {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  body main header nav ul {
+    display: none;
+  }
+  body main header nav .home,
+  body main header nav .about,
+  body main header nav .contact {
+    width: 10%;
+    color: white;
+    padding: 1.5em;
+  }
+}
+body main header nav a {
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+}
+body main header nav ul {
+  list-style: none;
+}
+body main header nav li {
+  display: inline;
+  padding: 1.5em;
+}
+body main header .home,
+body main header .about,
+body main header .contact {
+  color: white;
+}
+body main #headlines {
+  width: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+body main #headlines #mainHeader {
+  background-image: url("/media/banner.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #headlines #mainHeader h2 {
+  color: #235c7e;
+}
+
+/*# sourceMappingURL=main.css.map */
