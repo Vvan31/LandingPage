@@ -1,12 +1,40 @@
-@import url("/media/fonts/NeueHaasUnica-Regular.otf");
-@import url("/media/fonts/NeueHaasUnica-MediumItalic.otf");
-@import url("/media/fonts/NeueHaasUnica-Medium.otf");
-@import url("/media/fonts/NeueHaasUnica-Italic.otf");
+@font-face {
+  font-family: "NeueHaasUnica-Bold";
+  src: url("/media/fonts/NeueHaasUnica-Bold.otf");
+}
+@font-face {
+  font-family: "NeueHaasUnica-Black";
+  src: url("/media/fonts/NeueHaasUnica-Black.otf");
+}
+@font-face {
+  font-family: "NeueHaasUnica-Regular";
+  src: url("/media/fonts/NeueHaasUnica-Regular.otf");
+}
+@font-face {
+  font-family: "NeueHaasUnica-Regular2";
+  src: url("/media/fonts/NeueHaasUnica-Regular2.otf");
+}
+@font-face {
+  font-family: "NeueHaasUnica-MediumItalic";
+  src: url("/media/fonts/NeueHaasUnica-MediumItalic.otf");
+}
+@font-face {
+  font-family: "NeueHaasUnica-Medium";
+  src: url("/media/fonts/NeueHaasUnica-Medium.otf");
+}
+@font-face {
+  font-family: "NeueHaasUnica-Italic";
+  src: url("/media/fonts/NeueHaasUnica-Italic.otf");
+}
 body {
+  overflow-x: hidden;
   background-image: url("/media/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  /* background-size:100% 100%; */
+  font-family: "NeueHaasUnica-Medium";
   color: white;
+  width: 100%;
+  min-width: 600px;
 }
 body main {
   height: 100vh;
@@ -61,13 +89,73 @@ body main #headlines #mainHeader {
   background-image: url("/media/banner.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 110px;
+  display: block;
+  font-family: "NeueHaasUnica-Bold";
+  text-align: center;
+  padding-top: 0.5%;
+  font-size: 105%;
 }
 body main #headlines #mainHeader h2 {
   color: #235c7e;
+  line-height: 0.8;
+}
+body main #headlines #mainHeader #headlineBold {
+  font-family: "NeueHaasUnica-Black";
+}
+body main #headlines #secondary-headline {
+  margin-left: 5%;
+  margin-right: 5%;
+  border-bottom: solid;
+  border-color: #235c7e;
+  width: 90%;
+  text-align: center;
+  font-family: "NeueHaasUnica-Italic";
+}
+body main #headlines #secondary-headline #secondary {
+  font-family: "NeueHaasUnica-Italic";
+  font-size: 115%;
+}
+body main #mainContent {
+  display: flex;
+  margin: 5%;
+  padding: 5%;
+}
+body main #mainContent #hero {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  box-sizing: border-box;
+}
+body main #mainContent #hero #heroMedia {
+  float: top;
+  flex-grow: 4;
+  display: block;
+  height: 50%;
+  width: 100%;
+  background-image: url("/media/hero.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: #efaf58 solid;
+}
+body main #mainContent #hero #list {
+  float: top;
+  height: 50%;
+  width: 100%;
+  background-color: #235c7e;
+  border-radius: 5%;
+}
+body main #mainContent #hero #list ul {
+  list-style: none;
+}
+body main #mainContent #hero #list li {
+  margin-left: 0 0 0 0;
+  line-height: 2.5;
+  text-align: center;
+  width: 100%;
+  border-bottom: #092634 solid 0.1em;
 }
 
 /*# sourceMappingURL=main.css.map */
