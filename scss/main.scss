@@ -132,7 +132,7 @@ body{
             display: flex;
             margin: 5%;
             padding: 5%;
-            
+            justify-content: space-evenly;
             #hero{
                 width: 50%;
                 height: 100%;
@@ -169,6 +169,81 @@ body{
                     }
                 }
                
+            }
+            #form{
+                max-width: 300px;
+                margin-left: 15%;
+                width: 40%;
+                font-family: 'NeueHaasUnica-Regular2';
+                border: #efaf58 solid 0.2em;
+                border-radius: 35px;
+                button{
+                    max-width: 360px;
+                    border: none;
+                    border-radius: 35px;
+                    text-align: center;
+                    background-color: $color-highlight;
+                    position: absolute;
+                    z-index: 1;
+                    margin-top: -4%;
+                    margin-left: -3%;
+                    width: 35%;
+                    height: 10%;
+                    font-size: 1.5em;
+                }
+                ul{
+                    margin-top: 20%;
+                    list-style: none;
+                }
+                li{
+                    margin-left: -5%;
+                    line-height: 2.5;
+                    text-align: center;
+                    width: 100%;
+                    border-bottom: $color-main solid 0.1em;
+                    #creditCard{
+                        color: $color-highlight;
+                        font-size: 0.9em;
+                        line-height: 1.5;
+                    }
+                }
+                input{
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    color:  $color-text;
+                }
+                ::placeholder {
+                    font-size: 1em;
+                    color: $color-text;
+                    opacity: 1; 
+
+                  }
+                
+            }
+        }
+        #features{
+            border-top: $color-highlight solid 1em;
+            background-color: $color-text;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            #feature{
+                width: 30%;
+                #top{
+                    padding: 5%;
+                    background-color: $color-secondary;
+                    z-index: 3;
+                }
+                #bottom{
+                    /* position:relative; */
+                    margin-top: -2.5%;
+                    z-index: -1;
+                    padding: 5%;
+                    background-color: $color-main;
+                    border-radius: 15px;
+                }
             }
         }
     }
