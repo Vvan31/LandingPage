@@ -57,6 +57,7 @@ body main header nav {
   body main header nav .home,
   body main header nav .about,
   body main header nav .contact {
+    display: inline;
     width: 10%;
     color: white;
     padding: 1.5em;
@@ -78,6 +79,7 @@ body main header .home,
 body main header .about,
 body main header .contact {
   color: white;
+  display: none;
 }
 body main #headlines {
   width: 100%;
@@ -129,30 +131,30 @@ body main #mainContent #hero {
   flex-direction: column;
   row-gap: 0;
   box-sizing: border-box;
+  padding: 0;
 }
-body main #mainContent #hero #heroMedia {
-  float: top;
-  flex-grow: 4;
-  display: block;
-  height: 50%;
-  width: 100%;
-  background-image: url("/media/hero.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: #efaf58 solid;
+body main #mainContent #hero img {
+  width: 105%;
+  z-index: 4;
+  border-radius: 10%;
+  transform: translatex(-2%);
 }
 body main #mainContent #hero #list {
-  float: top;
+  padding-top: 5%;
+  z-index: 1;
+  margin-top: -8%;
   height: 50%;
   width: 100%;
   background-color: #235c7e;
-  border-radius: 5%;
+  box-shadow: 10px 10px 15px rgba(23, 4, 34, 0.7);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 body main #mainContent #hero #list ul {
+  padding: 0;
   list-style: none;
 }
 body main #mainContent #hero #list li {
-  margin-left: 0 0 0 0;
   line-height: 2.5;
   text-align: center;
   width: 100%;
@@ -160,7 +162,7 @@ body main #mainContent #hero #list li {
 }
 body main #mainContent #form {
   max-width: 300px;
-  margin-left: 15%;
+  margin-left: 10%;
   width: 40%;
   font-family: "NeueHaasUnica-Regular2";
   border: #efaf58 solid 0.2em;
@@ -172,20 +174,18 @@ body main #mainContent #form button {
   border-radius: 35px;
   text-align: center;
   background-color: #efaf58;
-  position: absolute;
   z-index: 1;
   margin-top: -4%;
-  margin-left: -3%;
-  width: 35%;
-  height: 10%;
+  transform: translatex(-5%);
+  width: 110%;
+  height: 18%;
   font-size: 1.5em;
 }
 body main #mainContent #form ul {
-  margin-top: 20%;
+  padding: 0;
   list-style: none;
 }
 body main #mainContent #form li {
-  margin-left: -5%;
   line-height: 2.5;
   text-align: center;
   width: 100%;
@@ -201,8 +201,10 @@ body main #mainContent #form input {
   background-color: transparent;
   border: none;
   color: white;
+  margin-bottom: 5%;
 }
 body main #mainContent #form ::placeholder {
+  text-align: center;
   font-size: 1em;
   color: white;
   opacity: 1;
@@ -215,21 +217,64 @@ body main #features {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 800px) {
+  body main #features {
+    flex-direction: column;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: space-evenly;
+  }
+  body main #features #feature {
+    position: relative;
+    margin-bottom: 5%;
+  }
+}
 body main #features #feature {
   width: 30%;
+  height: 80%;
+  position: relative;
+  margin-bottom: 5%;
+  box-shadow: 10px 10px 15px rgba(23, 4, 34, 0.7);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+body main #features #feature p {
+  padding-left: 10%;
 }
 body main #features #feature #top {
+  position: relative;
   padding: 5%;
   background-color: #235c7e;
   z-index: 3;
 }
 body main #features #feature #bottom {
-  /* position:relative; */
+  position: relative;
   margin-top: -2.5%;
-  z-index: -1;
+  z-index: 1;
   padding: 5%;
   background-color: #092634;
-  border-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+body main #features #top::before {
+  content: "";
+  height: 25%;
+  width: 5%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #092634;
+}
+body main #features #bottom::before {
+  content: "";
+  height: 25%;
+  width: 5%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #235c7e;
 }
 
 /*# sourceMappingURL=main.css.map */

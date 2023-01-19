@@ -61,6 +61,7 @@ body{
                     .home,
                     .about,
                     .contact {
+                        display: inline;
                         width: 10%;
                         color: $color-text;
                         padding: 1.5em;
@@ -85,6 +86,7 @@ body{
             .about,
             .contact {
                 color: $color-text;
+                display: none;
             }
         }
         #headlines{
@@ -140,28 +142,30 @@ body{
                 flex-direction: column;
                 row-gap: 0;
                 box-sizing: border-box;
-                #heroMedia{
-                    float: top;
-                    flex-grow: 4;
-                    display: block;
-                    height: 50%;
-                    width: 100%;
-                    background-image: url("/media/hero.png");
-                    background-size:contain;
-                    background-repeat: no-repeat;
-                    border: #efaf58 solid;
+                padding: 0;
+                               
+                img{
+                    width: 105%;
+                    z-index: 4;
+                    border-radius: 10%;
+                    transform: translatex(-2%);
                 }
+
                 #list{
-                    float: top;
+                    padding-top: 5%;
+                    z-index: 1;
+                    margin-top: -8%;
                     height: 50%;
                     width: 100%;
                     background-color: $color-secondary;
-                    border-radius: 5%;
+                    box-shadow: 10px 10px 15px rgb(23,4,34,0.7);
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
                     ul{
+                        padding: 0;
                         list-style: none;
                     }
                     li{
-                        margin-left:0 0 0 0;
                         line-height: 2.5;
                         text-align: center;
                         width: 100%;
@@ -172,7 +176,7 @@ body{
             }
             #form{
                 max-width: 300px;
-                margin-left: 15%;
+                margin-left: 10%;
                 width: 40%;
                 font-family: 'NeueHaasUnica-Regular2';
                 border: #efaf58 solid 0.2em;
@@ -183,24 +187,23 @@ body{
                     border-radius: 35px;
                     text-align: center;
                     background-color: $color-highlight;
-                    position: absolute;
                     z-index: 1;
                     margin-top: -4%;
-                    margin-left: -3%;
-                    width: 35%;
-                    height: 10%;
+                    transform: translatex(-5%);
+                    width: 110%;
+                    height: 18%;
                     font-size: 1.5em;
                 }
                 ul{
-                    margin-top: 20%;
+                    padding: 0;
                     list-style: none;
                 }
                 li{
-                    margin-left: -5%;
                     line-height: 2.5;
                     text-align: center;
                     width: 100%;
                     border-bottom: $color-main solid 0.1em;
+                    
                     #creditCard{
                         color: $color-highlight;
                         font-size: 0.9em;
@@ -212,8 +215,10 @@ body{
                     background-color: transparent;
                     border: none;
                     color:  $color-text;
+                    margin-bottom: 5%;
                 }
                 ::placeholder {
+                    text-align: center;
                     font-size: 1em;
                     color: $color-text;
                     opacity: 1; 
@@ -226,24 +231,68 @@ body{
             border-top: $color-highlight solid 1em;
             background-color: $color-text;
             display: flex;
+
+            @media screen and (max-width: 800px) {
+                flex-direction: column;
+                align-items: center;
+                column-gap: 20px;
+                justify-content: space-evenly;
+                #feature{
+                    position: relative;
+                    margin-bottom: 5%;
+                }
+            }
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
             #feature{
                 width: 30%;
+                height: 80%;
+                position: relative;
+                margin-bottom: 5%;
+                box-shadow: 10px 10px 15px rgb(23,4,34,0.7);
+
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                p{
+                    padding-left: 10%;
+
+                }
                 #top{
+                    position: relative;
                     padding: 5%;
                     background-color: $color-secondary;
                     z-index: 3;
                 }
                 #bottom{
-                    /* position:relative; */
+                    position: relative;
                     margin-top: -2.5%;
-                    z-index: -1;
+                    z-index: 1;
                     padding: 5%;
                     background-color: $color-main;
-                    border-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
                 }
+            }
+            #top::before{
+                content: "";
+                height: 25%;
+                width: 5%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $color-main;
+            }
+            #bottom::before{
+                content: "";
+                height: 25%;
+                width: 5%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $color-secondary;
             }
         }
     }

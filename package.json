@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Vvan31/LandingPage#readme",
   "dependencies": {
+    "node-sass": "^8.0.0",
     "sass": "^1.57.1"
   }
 }
