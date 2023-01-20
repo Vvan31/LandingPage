@@ -34,13 +34,20 @@ body {
   font-family: "NeueHaasUnica-Medium";
   color: white;
   width: 100%;
-  min-width: 600px;
+  min-width: 300px;
+  padding: 0;
+  margin: 0;
 }
 body main {
-  height: 100vh;
+  /* height: 100vh; */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.471));
+  padding-top: 0;
 }
 body main header {
   padding-left: 2%;
+  background-color: #235c7e;
+  margin-top: -1.5%;
+  height: 4em;
 }
 body main header nav {
   position: absolute;
@@ -61,6 +68,8 @@ body main header nav {
     width: 10%;
     color: white;
     padding: 1.5em;
+    transform: translatey(-15%);
+    right: 5px;
   }
 }
 body main header nav a {
@@ -155,6 +164,7 @@ body main #mainContent #hero #list ul {
   list-style: none;
 }
 body main #mainContent #hero #list li {
+  font-size: 120%;
   line-height: 2.5;
   text-align: center;
   width: 100%;
@@ -179,7 +189,7 @@ body main #mainContent #form button {
   transform: translatex(-5%);
   width: 110%;
   height: 18%;
-  font-size: 1.5em;
+  font-size: 150%;
 }
 body main #mainContent #form ul {
   padding: 0;
@@ -193,7 +203,7 @@ body main #mainContent #form li {
 }
 body main #mainContent #form li #creditCard {
   color: #efaf58;
-  font-size: 0.9em;
+  font-size: 90%;
   line-height: 1.5;
 }
 body main #mainContent #form input {
@@ -205,7 +215,7 @@ body main #mainContent #form input {
 }
 body main #mainContent #form ::placeholder {
   text-align: center;
-  font-size: 1em;
+  font-size: 110%;
   color: white;
   opacity: 1;
 }
@@ -224,10 +234,6 @@ body main #features {
     column-gap: 20px;
     justify-content: space-evenly;
   }
-  body main #features #feature {
-    position: relative;
-    margin-bottom: 5%;
-  }
 }
 body main #features #feature {
   width: 30%;
@@ -238,6 +244,13 @@ body main #features #feature {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+@media screen and (max-width: 800px) {
+  body main #features #feature {
+    width: 60%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
 body main #features #feature p {
   padding-left: 10%;
 }
@@ -246,6 +259,12 @@ body main #features #feature #top {
   padding: 5%;
   background-color: #235c7e;
   z-index: 3;
+}
+@media screen and (max-width: 800px) {
+  body main #features #feature #top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
 }
 body main #features #feature #bottom {
   position: relative;
@@ -275,6 +294,36 @@ body main #features #bottom::before {
   top: 50%;
   transform: translateY(-50%);
   background-color: #235c7e;
+}
+body main #information {
+  padding-top: 4%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40%;
+  align-items: center;
+  justify-content: center;
+}
+body main #information #projects {
+  text-align: center;
+  font-family: "NeueHaasUnica-Italic";
+  font-size: 2em;
+}
+body main #information #projects img {
+  width: 60%;
+}
+body main #information #slogan {
+  margin-top: 10%;
+  border: #efaf58 solid 0.1em;
+  font-size: 1.8em;
+  width: 76%;
+  border-radius: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+body main #information image {
+  float: left;
 }
 
 /*# sourceMappingURL=main.css.map */
