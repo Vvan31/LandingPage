@@ -131,16 +131,31 @@ body main #mainContent {
   display: flex;
   margin: 5%;
   padding: 5%;
+  gap: 60px;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 700px) {
+  body main #mainContent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
 body main #mainContent #hero {
+  position: relative;
   width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 0;
   box-sizing: border-box;
   padding: 0;
+}
+@media screen and (max-width: 800px) {
+  body main #mainContent #hero {
+    width: 85%;
+  }
 }
 body main #mainContent #hero img {
   width: 105%;
@@ -171,12 +186,18 @@ body main #mainContent #hero #list li {
   border-bottom: #092634 solid 0.1em;
 }
 body main #mainContent #form {
+  position: relative;
   max-width: 300px;
-  margin-left: 10%;
+  max-height: 300px;
   width: 40%;
   font-family: "NeueHaasUnica-Regular2";
   border: #efaf58 solid 0.2em;
   border-radius: 35px;
+}
+@media screen and (max-width: 800px) {
+  body main #mainContent #form {
+    width: 65%;
+  }
 }
 body main #mainContent #form button {
   max-width: 360px;
@@ -231,7 +252,6 @@ body main #features {
   body main #features {
     flex-direction: column;
     align-items: center;
-    column-gap: 20px;
     justify-content: space-evenly;
   }
 }
@@ -322,8 +342,11 @@ body main #information #slogan {
   padding-right: 5%;
   text-align: center;
 }
-body main #information image {
-  float: left;
+body main #information #logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=main.css.map */

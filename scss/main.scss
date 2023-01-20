@@ -142,13 +142,25 @@ body{
             display: flex;
             margin: 5%;
             padding: 5%;
+            gap: 60px;
+            @media screen and (max-width: 700px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-evenly;
+
             #hero{
+                @media screen and (max-width: 800px) {
+                    width: 85%;
+                }
+                position: relative;
                 width: 50%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                row-gap: 0;
                 box-sizing: border-box;
                 padding: 0;
                                
@@ -184,8 +196,12 @@ body{
                
             }
             #form{
+                @media screen and (max-width: 800px) {
+                    width: 65%;
+                }
+                position: relative;
                 max-width: 300px;
-                margin-left: 10%;
+                max-height: 300px;
                 width: 40%;
                 font-family: 'NeueHaasUnica-Regular2';
                 border: #efaf58 solid 0.2em;
@@ -243,7 +259,6 @@ body{
             @media screen and (max-width: 800px) {
                 flex-direction: column;
                 align-items: center;
-                column-gap: 20px;
                 justify-content: space-evenly;
             }
             flex-direction: row;
@@ -337,8 +352,11 @@ body{
                 padding-right: 5%;
                 text-align: center;
             }
-            image{
-                float: left;
+            #logos{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
             }
         }
     }
