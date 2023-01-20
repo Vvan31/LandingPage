@@ -37,25 +37,24 @@ body{
     overflow-x: hidden; 
     background-image: url("/media/background.png");
     background-repeat:repeat-y;
-    /* background-size:100% 100%; */
     font-family: 'NeueHaasUnica-Medium';
     color: $color-text;
     width: 100%;
-    min-width: 300px;
-    padding: 0;
     margin: 0;
+    min-width: 300px;
     main{    
-        /* height: 100vh; */
         background: linear-gradient(transparent, rgba(0, 0, 0, 0.471));
-        padding-top: 0;
         header{
+            z-index: 5;
+            width: 100%;
+            position: fixed;
             padding-left: 2%;
             background-color: $color-secondary;
-            margin-top: -1.5%;
+            padding-bottom: 10px;
             height: 4em;
             nav{
                 position: absolute;
-                top: 2%;
+                top: 0.5%;
                 right: 2%;
                 display: flex;
                 align-items: center;
@@ -86,6 +85,8 @@ body{
                     list-style: none;
                 }
                 li{
+                    transform: translatey(-15%);
+
                     display: inline;
                     padding: 1.5em;
                 }
@@ -98,6 +99,7 @@ body{
             }
         }
         #headlines{
+            padding-top: 4.2em;
             width: 100%;
             display:block;
             align-items: center;
