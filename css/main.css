@@ -48,13 +48,20 @@ body main header {
   padding-bottom: 10px;
   height: 4em;
 }
+@media screen and (max-width: 500px) {
+  body main header #brand {
+    display: none;
+  }
+}
 body main header nav {
-  position: absolute;
-  top: 0.5%;
-  right: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  flex-wrap: nowrap;
+  top: 0.2%;
+  right: 2%;
 }
 @media screen and (max-width: 900px) {
   body main header nav ul {
@@ -130,25 +137,28 @@ body main #headlines #secondary-headline #secondary {
 }
 body main #mainContent {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
   margin: 5%;
   padding: 5%;
   gap: 60px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 @media screen and (max-width: 700px) {
   body main #mainContent {
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
   }
 }
 body main #mainContent #hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   position: relative;
   width: 50%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   box-sizing: border-box;
   padding: 0;
@@ -162,7 +172,6 @@ body main #mainContent #hero img {
   width: 105%;
   z-index: 4;
   border-radius: 10%;
-  transform: translatex(-2%);
 }
 body main #mainContent #hero #list {
   padding-top: 5%;
@@ -210,7 +219,7 @@ body main #mainContent #form button {
   margin-top: -4%;
   transform: translatex(-5%);
   width: 110%;
-  height: 18%;
+  height: 60px;
   font-size: 150%;
 }
 body main #mainContent #form ul {
@@ -319,11 +328,11 @@ body main #features #bottom::before {
 body main #information {
   padding-top: 4%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 40%;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40%;
 }
 body main #information #projects {
   text-align: center;
@@ -345,8 +354,8 @@ body main #information #slogan {
 }
 body main #information #logos {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 

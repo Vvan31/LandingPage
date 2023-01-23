@@ -1,0 +1,33 @@
+$color-main: rgba(#092634, 1);
+$color-secondary: rgba(#235c7e,1);
+$color-highlight: rgba(#efaf58,1);
+$color-text: rgba(#ffffff, 1);
+
+@font-face {
+    font-family: 'NeueHaasUnica-Bold';
+    src: url("/media/fonts/NeueHaasUnica-Bold.otf");
+}
+@font-face {
+    font-family: 'NeueHaasUnica-Black';
+    src: url("/media/fonts/NeueHaasUnica-Black.otf");
+}
+@font-face {
+    font-family: 'NeueHaasUnica-Regular';
+    src: url("/media/fonts/NeueHaasUnica-Regular.otf");
+}
+@font-face {
+    font-family: 'NeueHaasUnica-Regular2';
+    src: url("/media/fonts/NeueHaasUnica-Regular2.otf");
+}
+@font-face {
+    font-family: 'NeueHaasUnica-MediumItalic';
+    src: url("/media/fonts/NeueHaasUnica-MediumItalic.otf");
+}
+@font-face {
+    font-family: 'NeueHaasUnica-Medium';
+    src: url("/media/fonts/NeueHaasUnica-Medium.otf");
+}
+@font-face {
+    font-family: 'NeueHaasUnica-Italic';
+    src: url("/media/fonts/NeueHaasUnica-Italic.otf");
+}

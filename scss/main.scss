@@ -1,44 +1,18 @@
-$color-main: rgba(#092634, 1);
-$color-secondary: rgba(#235c7e,1);
-$color-highlight: rgba(#efaf58,1);
-$color-text: rgba(#ffffff, 1);
+@use 'variables' as v;
 
-@font-face {
-    font-family: 'NeueHaasUnica-Bold';
-    src: url("/media/fonts/NeueHaasUnica-Bold.otf");
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-@font-face {
-    font-family: 'NeueHaasUnica-Black';
-    src: url("/media/fonts/NeueHaasUnica-Black.otf");
-}
-@font-face {
-    font-family: 'NeueHaasUnica-Regular';
-    src: url("/media/fonts/NeueHaasUnica-Regular.otf");
-}
-@font-face {
-    font-family: 'NeueHaasUnica-Regular2';
-    src: url("/media/fonts/NeueHaasUnica-Regular2.otf");
-}
-@font-face {
-    font-family: 'NeueHaasUnica-MediumItalic';
-    src: url("/media/fonts/NeueHaasUnica-MediumItalic.otf");
-}
-@font-face {
-    font-family: 'NeueHaasUnica-Medium';
-    src: url("/media/fonts/NeueHaasUnica-Medium.otf");
-}
-@font-face {
-    font-family: 'NeueHaasUnica-Italic';
-    src: url("/media/fonts/NeueHaasUnica-Italic.otf");
-}
-
 
 body{
     overflow-x: hidden; 
     background-image: url("/media/background.png");
     background-repeat:repeat-y;
     font-family: 'NeueHaasUnica-Medium';
-    color: $color-text;
+    color: v.$color-text;
     width: 100%;
     margin: 0;
     min-width: 300px;
@@ -49,16 +23,22 @@ body{
             width: 100%;
             position: fixed;
             padding-left: 2%;
-            background-color: $color-secondary;
+            background-color: v.$color-secondary;
             padding-bottom: 10px;
             height: 4em;
+            #brand{
+                @media screen and (max-width: 500px) {
+                    display: none;
+                }
+            }
+           
             nav{
+                @include flex;
                 position: absolute;
-                top: 0.5%;
+                flex-wrap: nowrap;
+                top: 0.2%;
                 right: 2%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                
                 @media screen and (max-width: 900px) {
                     ul{
                         display: none;
@@ -68,7 +48,7 @@ body{
                     .contact {
                         display: inline;
                         width: 10%;
-                        color: $color-text;
+                        color: v.$color-text;
                         padding: 1.5em;
                         transform: translatey(-15%);
                         right: 5px;
@@ -77,7 +57,7 @@ body{
                 
                 a{
                     font-size: 1.2em;
-                    color: $color-text;
+                    color: v.$color-text;
                     text-decoration: none;
                 }
         
@@ -86,7 +66,6 @@ body{
                 }
                 li{
                     transform: translatey(-15%);
-
                     display: inline;
                     padding: 1.5em;
                 }
@@ -94,7 +73,7 @@ body{
             .home,
             .about,
             .contact {
-                color: $color-text;
+                color: v.$color-text;
                 display: none;
             }
         }
@@ -115,7 +94,7 @@ body{
                 padding-top: 0.5%;
                 font-size: 105%;
                 h2{
-                    color: $color-secondary;
+                    color: v.$color-secondary;
                     line-height: 0.8;
                 }
                 #headlineBold{
@@ -126,7 +105,7 @@ body{
                 margin-left: 5%;
                 margin-right: 5%;
                 border-bottom: solid;
-                border-color: $color-secondary;
+                border-color: v.$color-secondary;
                 width: 90%;
                 
                 text-align: center;
@@ -141,27 +120,25 @@ body{
         }
 
         #mainContent{
-            display: flex;
+            @include flex;
+            justify-content: space-evenly;
+            flex-direction: row;
             margin: 5%;
             padding: 5%;
             gap: 60px;
             @media screen and (max-width: 700px) {
                 flex-direction: column;
-                align-items: center;
-                justify-content: space-evenly;
             }
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+            
 
             #hero{
                 @media screen and (max-width: 800px) {
                     width: 85%;
                 }
+                @include flex;
                 position: relative;
                 width: 50%;
                 height: 100%;
-                display: flex;
                 flex-direction: column;
                 box-sizing: border-box;
                 padding: 0;
@@ -170,16 +147,14 @@ body{
                     width: 105%;
                     z-index: 4;
                     border-radius: 10%;
-                    transform: translatex(-2%);
                 }
-
                 #list{
                     padding-top: 5%;
                     z-index: 1;
                     margin-top: -8%;
                     height: 50%;
                     width: 100%;
-                    background-color: $color-secondary;
+                    background-color: v.$color-secondary;
                     box-shadow: 10px 10px 15px rgb(23,4,34,0.7);
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
@@ -192,11 +167,11 @@ body{
                         line-height: 2.5;
                         text-align: center;
                         width: 100%;
-                        border-bottom: $color-main solid 0.1em;
+                        border-bottom: v.$color-main solid 0.1em;
                     }
                 }
-               
             }
+
             #form{
                 @media screen and (max-width: 800px) {
                     width: 65%;
@@ -213,12 +188,12 @@ body{
                     border: none;
                     border-radius: 35px;
                     text-align: center;
-                    background-color: $color-highlight;
+                    background-color: v.$color-highlight;
                     z-index: 1;
                     margin-top: -4%;
                     transform: translatex(-5%);
                     width: 110%;
-                    height: 18%;
+                    height: 60px;
                     font-size: 150%;
                 }
                 ul{
@@ -229,10 +204,10 @@ body{
                     line-height: 2.5;
                     text-align: center;
                     width: 100%;
-                    border-bottom: $color-main solid 0.1em;
+                    border-bottom: v.$color-main solid 0.1em;
                     
                     #creditCard{
-                        color: $color-highlight;
+                        color: v.$color-highlight;
                         font-size: 90%;
                         line-height: 1.5;
                     }
@@ -241,31 +216,31 @@ body{
                     width: 100%;
                     background-color: transparent;
                     border: none;
-                    color:  $color-text;
+                    color:  v.$color-text;
                     margin-bottom: 5%;
                 }
                 ::placeholder {
                     text-align: center;
                     font-size: 110%;
-                    color: $color-text;
+                    color: v.$color-text;
                     opacity: 1; 
                   }
-                
             }
         }
         #features{
-            border-top: $color-highlight solid 1em;
-            background-color: $color-text;
+            border-top: v.$color-highlight solid 1em;
+            background-color: v.$color-text;
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
 
             @media screen and (max-width: 800px) {
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-evenly;
             }
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+            
             #feature{
                 @media screen and (max-width: 800px) {
                     width: 60%;
@@ -282,25 +257,23 @@ body{
                 border-bottom-right-radius: 15px;
                 p{
                     padding-left: 10%;
-
                 }
                 #top{
                     position: relative;
                     padding: 5%;
-                    background-color: $color-secondary;
+                    background-color: v.$color-secondary;
                     z-index: 3;
                     @media screen and (max-width: 800px) {
                         border-top-left-radius: 15px;
                         border-top-right-radius: 15px;
                     }
-
                 }
                 #bottom{
                     position: relative;
                     margin-top: -2.5%;
                     z-index: 1;
                     padding: 5%;
-                    background-color: $color-main;
+                    background-color: v.$color-main;
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
                 }
@@ -313,7 +286,7 @@ body{
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
-                background-color: $color-main;
+                background-color: v.$color-main;
             }
             #bottom::before{
                 content: "";
@@ -323,30 +296,26 @@ body{
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
-                background-color: $color-secondary;
+                background-color: v.$color-secondary;
             }
         }
 
         #information{
             padding-top: 4%;
-            display: flex;
+            @include flex;
             flex-direction: column;
-            flex-wrap: wrap;
             gap: 40%;
-            align-items: center;
-            justify-content: center;
             #projects{
                 text-align: center;
                 font-family:'NeueHaasUnica-Italic';
                 font-size: 2em;
                 img{
                     width: 60%;
-                    
                 }
             }
             #slogan{
                 margin-top: 10%;
-                border: $color-highlight solid 0.1em;
+                border: v.$color-highlight solid 0.1em;
                 font-size: 1.8em;
                 width: 76%;
                 border-radius: 30px;
@@ -355,10 +324,7 @@ body{
                 text-align: center;
             }
             #logos{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
+                @include flex;
             }
         }
     }
