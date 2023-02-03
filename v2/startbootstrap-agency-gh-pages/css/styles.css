@@ -606,8 +606,6 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  /* background-color: #fff;
-  border: 1px solid #dee2e6; */
   border-radius: 0.25rem;
   max-width: 80%;
   height: auto;
@@ -680,6 +678,18 @@ progress {
     max-width: 1320px;
   }
 }
+/*  */
+#features {
+  border-top: #efaf58 solid 1em;
+  background-color: white;
+  width: 100vw;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
