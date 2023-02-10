@@ -644,6 +644,11 @@ progress {
   margin-left: auto;
   padding-top: 0;
   margin-bottom: 2%;
+ 
+}
+video{
+  width: 100%;
+  height: auto;
 }
 .hero{
   align-items: center;
@@ -662,6 +667,15 @@ progress {
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 720px;
+  }
+  #top{
+    background-color:#b10ac0;
+    z-index: 3;
+    border-top-left-radius: none;
+    border-top-right-radius: none;
+  }
+  #features{
+    height: auto;
   }
 }
 @media (min-width: 992px) {
@@ -692,6 +706,7 @@ progress {
   padding: 0;
   margin-right: 0;
   margin-left: 0;
+   height: 70%; 
 }
 #feature{
   padding-top: 0;
@@ -702,8 +717,12 @@ progress {
 #top{
   background-color:#0aa2c0;
   z-index: 3;
+  padding: 2%;
+
 }
 #bottom{
+  padding: 2%;
+
   margin-top: -2.5%;
   z-index: 1;
   background-color:#1e3439;
@@ -11350,8 +11369,7 @@ p {
 
 .page-section {
   background-image: url("/media/background.png");
-  height: 100vh;
-  padding: 3rem;
+  padding: 3rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
