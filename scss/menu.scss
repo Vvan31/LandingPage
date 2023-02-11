@@ -1,5 +1,10 @@
 @use 'variables' as v;
-
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 header{
     z-index: 5;
     width: 100%;

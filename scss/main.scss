@@ -2,7 +2,7 @@
 
 @mixin flex {
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -25,7 +25,7 @@ body{
             padding-left: 2%;
             background-color: v.$color-secondary;
             padding-bottom: 10px;
-            height: 4em;
+            height: 100vh;
             #brand{
                 @media screen and (max-width: 500px) {
                     display: none;
@@ -78,23 +78,18 @@ body{
             }
         }
         #headlines{
-            padding-top: 4.2em;
+            @include flex;
+            align-content: space-around;
+
             width: 100%;
-            display:block;
-            align-items: center;
-            justify-content: center;
+            height: 100vh;
+
             #mainHeader{
-                background-image: url("/media/banner.png");
-                background-repeat: no-repeat;
-                background-size: 100%;
-                height: 110px;
-                display: block;
                 font-family: 'NeueHaasUnica-Bold';
                 text-align: center;
-                padding-top: 0.5%;
                 font-size: 105%;
                 h2{
-                    color: v.$color-secondary;
+                    color: v.$color-text;
                     line-height: 0.8;
                 }
                 #headlineBold{
@@ -102,25 +97,30 @@ body{
                 }
             }
             #secondary-headline{
-                margin-left: 5%;
-                margin-right: 5%;
+                /* margin-left: 5%;
+                margin-right: 5%; */
                 border-bottom: solid;
                 border-color: v.$color-secondary;
                 width: 90%;
-                
                 text-align: center;
                 font-family: 'NeueHaasUnica-Italic';
-
                 #secondary{
                     font-family: 'NeueHaasUnica-Italic';
                     font-size: 115%;
                 }
+            }
+            #heroShotmedia{
+                height: auto;
+                width: 60vw;
+                border-radius: 10%;
             }
            
         }
 
         #mainContent{
             @include flex;
+            height: 100vh;
+
             justify-content: space-evenly;
             flex-direction: row;
             margin: 5%;
@@ -248,7 +248,6 @@ body{
                     border-top-right-radius: 15px;
                 }
                 width: 30%;
-                height: 80%;
                 position: relative;
                 margin-bottom: 5%;
                 box-shadow: 10px 10px 15px rgb(23,4,34,0.7);
@@ -301,6 +300,8 @@ body{
         }
 
         #information{
+            height: 100vh;
+
             padding-top: 4%;
             @include flex;
             flex-direction: column;

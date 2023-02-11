@@ -46,7 +46,7 @@ body main header {
   padding-left: 2%;
   background-color: #235c7e;
   padding-bottom: 10px;
-  height: 4em;
+  height: 100vh;
 }
 @media screen and (max-width: 500px) {
   body main header #brand {
@@ -55,7 +55,7 @@ body main header {
 }
 body main header nav {
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
   flex-wrap: wrap;
   position: absolute;
@@ -98,33 +98,29 @@ body main header .contact {
   display: none;
 }
 body main #headlines {
-  padding-top: 4.2em;
-  width: 100%;
-  display: block;
-  align-items: center;
+  display: flex;
+  align-content: center;
   justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: 100%;
+  height: 100vh;
 }
 body main #headlines #mainHeader {
-  background-image: url("/media/banner.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 110px;
-  display: block;
   font-family: "NeueHaasUnica-Bold";
   text-align: center;
-  padding-top: 0.5%;
   font-size: 105%;
 }
 body main #headlines #mainHeader h2 {
-  color: #235c7e;
+  color: white;
   line-height: 0.8;
 }
 body main #headlines #mainHeader #headlineBold {
   font-family: "NeueHaasUnica-Black";
 }
 body main #headlines #secondary-headline {
-  margin-left: 5%;
-  margin-right: 5%;
+  /* margin-left: 5%;
+  margin-right: 5%; */
   border-bottom: solid;
   border-color: #235c7e;
   width: 90%;
@@ -135,11 +131,17 @@ body main #headlines #secondary-headline #secondary {
   font-family: "NeueHaasUnica-Italic";
   font-size: 115%;
 }
+body main #headlines #heroShotmedia {
+  height: auto;
+  width: 60vw;
+  border-radius: 10%;
+}
 body main #mainContent {
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
   flex-wrap: wrap;
+  height: 100vh;
   justify-content: space-evenly;
   flex-direction: row;
   margin: 5%;
@@ -153,7 +155,7 @@ body main #mainContent {
 }
 body main #mainContent #hero {
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
@@ -257,6 +259,7 @@ body main #features {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  height: 100vh;
 }
 @media screen and (max-width: 800px) {
   body main #features {
@@ -326,9 +329,10 @@ body main #features #bottom::before {
   background-color: #235c7e;
 }
 body main #information {
+  height: 100vh;
   padding-top: 4%;
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
@@ -354,7 +358,7 @@ body main #information #slogan {
 }
 body main #information #logos {
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
   flex-wrap: wrap;
 }
