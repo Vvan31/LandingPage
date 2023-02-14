@@ -1011,6 +1011,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 [data-aos=fade-up] {
     transform: translate3d(0, 100px, 0)
 }
+@media screen and (min-width: 991px) {
+    [data-aos=fade-up] {
+        
+    }
+}
 
 [data-aos=fade-down] {
     transform: translate3d(0, -100px, 0)
