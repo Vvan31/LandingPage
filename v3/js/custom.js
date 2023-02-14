@@ -38,7 +38,18 @@
         }
       }
     });
+
+ 
     
   })(window.jQuery);
+   // modal
+   $('#myInput').click(function(){
+    console.log("modal");
+    $('#myModal').modal("show")
+   })
 
+/*    $('#myModal').on('shown.bs.modal', function () {
+    console.log("modal");
+    $('#myInput').modal('show')
+  }) */
   

@@ -650,6 +650,21 @@ strong {
   filter: grayscale(100);
 }
 
+.popup{
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  z-index: 15;
+  margin: 0;
+  box-shadow: 10px 10px 15px rgb(23,4,34,0.7) ;
+  
+}
+.popup i{
+  zoom: 1.6;
+}
 /*---------------------------------------
   SITE FOOTER               
 -----------------------------------------*/
