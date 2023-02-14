@@ -104,6 +104,12 @@ p {
   color: var(--p-color);
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-light);
+  letter-spacing: 0.7px;
+}
+.p{
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
   letter-spacing: 0.5px;
 }
 
@@ -160,43 +166,49 @@ a:hover {
   bottom: 0;
   left: 0;
 }
+/* .overlay-2 {
+  background: linear-gradient(to top, #000, transparent 97%);
+  position: absolute;
+  top: inherit;
+  right: 0;
+  bottom: inherit;
+  left: 0;
+} */
 /* ------------------------------------------
   FEATURES
 ------------------------------------------ */
 #features {
-  border-top: #efaf58 solid 1em;
+  border-top: var(--bs-orange) solid 1.5em;
   background-color: white;
-  padding: 0;
+  padding-left:10em;
+  padding-right: 10em;
   margin-right: 0;
   margin-left: 0;
-   height: 70%; 
+  height: 70%; 
 }
-#feature{
-  padding-top: 0;
-  box-shadow: 10px 10px 15px rgb(23,4,34,0.7);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-#feature p{
-  color: var(--white-color) !important;
-
+.feature p{
+  color: var(--white-color);
+  text-align: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  size: 15%;
 }
 #top{
-  background-color:#0aa2c0;
-  color: var(--white-color) !important;
+  background-color: var(--bs-primary);
   z-index: 3;
   padding: 2%;
-  color: var(--white-color);
-  
+  box-shadow: 10px 10px 15px rgb(23,4,34,0.7) ;
+
 }
 #bottom{
   padding: 2%;
-
   margin-top: -2.5%;
   z-index: 1;
-  background-color:#1e3439;
+  background-color: var(--bs-secondary);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  box-shadow: 10px 10px 15px rgb(23,4,34,0.7);
+
 }
 
 
@@ -422,7 +434,7 @@ strong {
 /*---------------------------------------
   ABOUT & TEAM MEMBERS               
 -----------------------------------------*/
-/* .about-image,
+ .about-image,
 .team-image {
   width: 100%;
   height: 100%;
@@ -430,7 +442,11 @@ strong {
   min-height: 475px;
   object-fit: cover;
 }
-
+.bullet{
+  padding-left: 0%;
+  padding-right: 0%;
+}
+/*
 .team-thumb {
   background: var(--white-color);
   position: absolute;
@@ -478,7 +494,10 @@ strong {
 
 .news,
 .related-news {
-  background: var(--section-bg-color);
+  background-color: var(--bs-secondary);
+  /* background-image: url("/media/background.png");
+  background-repeat:repeat-y; */
+  color: var(--white-color);
 }
 
 .news-thumb {
@@ -586,7 +605,6 @@ strong {
   SECTION               
 -----------------------------------------*/
 .section-padding {
-  padding-top: 1rem;
   padding-bottom: 7rem;
 }
 
@@ -596,7 +614,10 @@ strong {
 .contact-info {
   padding: 40px;
 }
-
+.contact{
+  background-color: var(--bs-secondary);
+  color: var(--white-color);
+}
 .contact-form .form-control {
   border-radius: 0;
   font-weight: var(--font-weight-normal);
@@ -688,7 +709,18 @@ strong {
   .news-two-column {
     min-height: 232.5px;
   }
+  #features {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
 }
+@media screen and (min-width: 1395px) {
+  #features {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
 
 @media screen and (max-width: 991px) {
   h1 {
@@ -720,9 +752,9 @@ strong {
     padding-bottom: 10px;
   }
 
-  .section-padding {
-    padding-top: 1rem;
-    padding-bottom: 6rem;
+  #features {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .team-thumb {

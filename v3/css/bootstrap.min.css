@@ -12,7 +12,7 @@
     --bs-purple: #6f42c1;
     --bs-pink: #d63384;
     --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
+    --bs-orange: #dfbc5c;
     --bs-yellow: #ffc107;
     --bs-green: #198754;
     --bs-teal: #20c997;
@@ -20,8 +20,8 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
+    --bs-primary: #005D81;
+    --bs-secondary: #002635;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
     --bs-warning: #ffc107;
@@ -102,7 +102,8 @@ h1 {
 
 .h2,
 h2 {
-    font-size: calc(1.325rem + .9vw)
+    font-size: calc(1.325rem + .9vw);
+    margin-top: 5%;
 }
 
 @media (min-width:1200px) {
@@ -639,11 +640,12 @@ progress {
 .container-xl,
 .container-xxl {
     width: 100%;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
+    padding-right: var(--bs-gutter-x, .95rem);
+    padding-left: var(--bs-gutter-x, .95rem);
     margin-right: auto;
     margin-left: auto
 }
+
 
 @media (min-width:576px) {
 
@@ -702,7 +704,7 @@ progress {
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
     margin-right: calc(var(--bs-gutter-x)/ -2);
-    margin-left: calc(var(--bs-gutter-x)/ -2)
+    margin-left: calc(var(--bs-gutter-x)/ -2);
 }
 
 .row>* {
@@ -7933,8 +7935,8 @@ fieldset:disabled .btn {
 }
 
 .px-4 {
-    padding-right: 1.5rem !important;
-    padding-left: 1.5rem !important
+    padding-right: 2.5rem !important;
+    padding-left: 5.5rem !important
 }
 
 .px-5 {
