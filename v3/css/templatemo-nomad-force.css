@@ -16,8 +16,8 @@ https://templatemo.com/tm-567-nomad-force
   --dark-color:                   #000000;
   --grey-color:                   #fcfeff;
   --text-secondary-white-color:   rgba(255, 255, 255, 0.98);
-  --title-color:                  #565758;
-  --p-color:                      #717275;
+  --title-color:                  #e4e5e6;
+  --p-color:                      #b6bec6;
 
   --body-font-family:           'Noto Sans JP', sans-serif;
 
@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--dark-color);
+  color: var(--bs-light);
   line-height: inherit;
 }
 
@@ -529,7 +529,7 @@ strong {
 }
 
 .news-title-link:hover {
-  color: var(--dark-color);
+  color: var(--bs-orange);
 }
 
 .portfolio-image,
@@ -562,15 +562,15 @@ strong {
 }
 
 .news-image-hover-warning::after {
-  background: #ffc107;
+  background: var(--bs-orange);
 }
 
 .news-image-hover-primary::after {
-  background: #0d6efd;
+  background: var(--bs-primary);
 }
 
 .news-image-hover-success::after {
-  background: #198754;
+  background: var(--bs-orange);
 }
 
 .news-image-hover:hover::after {
@@ -626,7 +626,7 @@ strong {
 }
 
 .contact-form button[type='submit'] {
-  background: var(--dark-color);
+  background: var(--bs-primary);
   border: none;
   border-radius: 100px;
   color: var(--white-color);
@@ -654,7 +654,7 @@ strong {
   SITE FOOTER               
 -----------------------------------------*/
 .site-footer {
-  background: var(--dark-color);
+  background: var(--bs-primary);
   padding-top: 4.5rem;
   padding-bottom: 2.5rem;
 }

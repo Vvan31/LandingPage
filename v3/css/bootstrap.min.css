@@ -8248,7 +8248,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-    background-color: #0d6efd !important
+    background-color: var(--bs-primary) !important
 }
 
 .bg-secondary {
@@ -8256,7 +8256,7 @@ fieldset:disabled .btn {
 }
 
 .bg-success {
-    background-color: #198754 !important
+    background-color: var(--bs-secondary) !important
 }
 
 .bg-info {
@@ -8264,7 +8264,7 @@ fieldset:disabled .btn {
 }
 
 .bg-warning {
-    background-color: #ffc107 !important
+    background-color: var(--bs-orange) !important
 }
 
 .bg-danger {
