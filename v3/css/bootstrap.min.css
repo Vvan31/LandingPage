@@ -5966,7 +5966,8 @@ fieldset:disabled .btn {
     position: relative;
     width: auto;
     margin: .5rem;
-    pointer-events: none
+    pointer-events: none;
+    padding: 5%;
 }
 
 .modal.fade .modal-dialog {
@@ -6049,14 +6050,25 @@ fieldset:disabled .btn {
     border-top-right-radius: calc(.3rem - 1px)
 }
 
-.modal-header .btn-close {
+.modal-header  {
     padding: .5rem .5rem;
     margin: -.5rem -.5rem -.5rem auto
 }
+.close{
+    border: none;
+    background-color: transparent;
+    margin-right: 0.3rem;
+    top: 5%;
+    left: 5%;
+    zoom: 1.5;
+}
 
 .modal-title {
-    margin-bottom: 0;
-    line-height: 1.5
+    margin-top: 5%;
+    margin-right: 5%;
+    line-height: 1.5;
+    color: var(--bs-primary);
+    text-align: center;
 }
 
 .modal-body {

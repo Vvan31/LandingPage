@@ -44,12 +44,11 @@
   })(window.jQuery);
    // modal
    $('#myInput').click(function(){
-    console.log("modal");
     $('#myModal').modal("show")
    })
+   $('#close').click(function(){
+    $('#myModal').modal("hide")
+   })
 
-/*    $('#myModal').on('shown.bs.modal', function () {
-    console.log("modal");
-    $('#myInput').modal('show')
-  }) */
+
   
