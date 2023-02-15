@@ -197,11 +197,13 @@ a:hover {
   background-color: var(--bs-primary);
   z-index: 3;
   padding: 2%;
+  padding-left: 5%;
   box-shadow: 10px 10px 15px rgb(23,4,34,0.7) ;
 
 }
 #bottom{
   padding: 2%;
+  padding-left: 5%;
   margin-top: -2.5%;
   z-index: 1;
   background-color: var(--bs-secondary);
@@ -211,7 +213,26 @@ a:hover {
 
 }
 
-
+#top::before{
+  content: "";
+  height: 25%;
+  width: 5%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bs-secondary);
+}
+#bottom::before{
+  content: "";
+  height: 25%;
+  width: 5%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bs-primary);
+}
 
 
 /*---------------------------------------
