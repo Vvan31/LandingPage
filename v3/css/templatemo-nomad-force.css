@@ -159,7 +159,7 @@ a:hover {
 }
 
 .overlay {
-  background: linear-gradient(to top, #000, transparent 97%);
+  background: linear-gradient(to top, #000, transparent 99%);
   position: absolute;
   top: 0;
   right: 0;
@@ -423,6 +423,10 @@ strong {
   position: relative;
   overflow: hidden;
 }
+.material-symbols-outlined{
+  color:var(--title-color);
+  scale: 123%;
+}
 
 @media screen and (min-width: 992px) {
   .hero {
@@ -445,7 +449,7 @@ strong {
 .heroText {
   position: absolute;
   z-index: 9;
-  top: 50%;
+  top: 92%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 85%;
